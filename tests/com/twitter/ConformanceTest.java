@@ -12,6 +12,7 @@ import org.ho.yaml.Yaml;
 
 import com.twitter.Extractor.Entity;
 
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class ConformanceTest extends TestCase {
 
   private static final String CONFORMANCE_DIR_PROPERTY = "conformance.dir";
@@ -25,7 +26,8 @@ public class ConformanceTest extends TestCase {
   protected Validator validator = new Validator();
   protected HitHighlighter hitHighlighter = new HitHighlighter();
 
-  public void testMentionsExtractor() throws Exception {
+
+public void testMentionsExtractor() throws Exception {
     File yamlFile = new File(conformanceDir, "extract.yml");
     List testCases = loadConformanceData(yamlFile, "mentions");
     for (Map testCase : (List<Map>)testCases) {
@@ -35,7 +37,8 @@ public class ConformanceTest extends TestCase {
     }
   }
 
-  public void testReplyExtractor() throws Exception {
+
+public void testReplyExtractor() throws Exception {
     File yamlFile = new File(conformanceDir, "extract.yml");
     List testCases = loadConformanceData(yamlFile, "replies");
     for (Map testCase : (List<Map>)testCases) {
@@ -45,7 +48,8 @@ public class ConformanceTest extends TestCase {
     }
   }
 
-  public void testHashtagsExtractor() throws Exception {
+
+public void testHashtagsExtractor() throws Exception {
     File yamlFile = new File(conformanceDir, "extract.yml");
     List testCases = loadConformanceData(yamlFile, "hashtags");
     for (Map testCase : (List<Map>)testCases) {

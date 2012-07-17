@@ -11,7 +11,8 @@ public class Benchmark extends ConformanceTest {
   private static final int AUTO_LINK_TESTS = 10000;
   private static final int ITERATIONS = 10;
 
-  public double testBenchmarkAutolinking() throws Exception {
+  @SuppressWarnings({ "rawtypes", "unchecked" })
+public double testBenchmarkAutolinking() throws Exception {
     File yamlFile = new File(conformanceDir, "autolink.yml");
     List testCases = loadConformanceData(yamlFile, "all");
     autolink(testCases);
