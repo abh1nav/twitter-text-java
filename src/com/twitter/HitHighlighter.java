@@ -1,9 +1,9 @@
 
 package com.twitter;
 
-import java.util.*;
-import java.util.regex.*;
-import java.text.*;
+import java.text.CharacterIterator;
+import java.text.StringCharacterIterator;
+import java.util.List;
 
 /**
  * A class for adding HTML highlighting in Tweet text (such as would be returned from a Search)

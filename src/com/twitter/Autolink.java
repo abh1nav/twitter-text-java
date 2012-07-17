@@ -118,6 +118,10 @@ public class Autolink {
     }
     // append <a> tag
     builder.append("<a");
+    
+    // add target="_blank" as an attribute
+    attributes.put("target", "_blank");
+    
     for (Map.Entry<String, String> entry : attributes.entrySet()) {
       builder.append(" ").append(escapeHTML(entry.getKey())).append("=\"").append(escapeHTML(entry.getValue())).append("\"");
     }
